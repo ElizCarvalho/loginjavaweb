@@ -27,7 +27,11 @@
     <mvc:interceptors>
         <bean class="com.github.elizcarvalho.util.LoginInterceptor" /> <!-- INCLUI .. por causa da validacao do token da pagina de login--> 
     </mvc:interceptors>
-
+    
+    <context:annotation-config />
+    <context:component-scan base-package="com.github.elizcarvalho.controller" />
+    <mvc:annotation-driven />
+    
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
