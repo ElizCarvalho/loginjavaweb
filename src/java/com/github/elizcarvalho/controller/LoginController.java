@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author Eliz
  */
 @Controller
-public class LoginControler {
+public class LoginController {
     
     //serve para mapear a pagina de login
     @RequestMapping(value = "/login.htm", method = RequestMethod.GET)
@@ -38,7 +38,7 @@ public class LoginControler {
     public String efetuarLogin(@ModelAttribute("user") User user, HttpSession session, HttpServletRequest request){
         
         UserDao udao = new UserDao();
-        if(udao.existUser(user)) {
+        if(udao.existUser(user)){
         //if(user.getUsername().equals("root") && user.getPassword().equals("root")){
             session.setAttribute("token", "approved");
             return "index";

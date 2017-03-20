@@ -21,5 +21,10 @@ public class MainController {
         return "index";
     }
     
+    @RequestMapping(value = "/menu.htm", method = RequestMethod.GET)
+    public String callMenu(){
+        return "menu";
+    }
+    
     
 }

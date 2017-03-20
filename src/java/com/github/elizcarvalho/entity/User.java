@@ -9,21 +9,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
  *
  * @author Eliz
  */
+
 @Entity
 @Table(name = "user")
 public class User {
-    
-//    @NamedQuery(
-//        name = "existUser",
-//        query = "SELECT u do user u WHERE u.username AND u.password LIKE: custName and custPass\""
-//    )
     
     @Id
     @GeneratedValue
@@ -33,6 +28,9 @@ public class User {
     private String username;
     @Column(name = "password")
     private String password;
+    @Column(name = "email")
+    private String email;
+   
 
     public int getIduser() {
         return iduser;
@@ -58,6 +56,12 @@ public class User {
         this.password = password;
     }
     
-    
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
     
 }
