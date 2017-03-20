@@ -32,6 +32,7 @@
             </table>
                 <input type="submit" value="Login" />
         </s:form>
-                
+        <br/><br/>
+        <a href="iniciaCadastroUser.htm">User Register</a></li>
     </body>
 </html>

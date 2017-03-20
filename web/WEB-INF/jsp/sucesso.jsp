@@ -14,6 +14,7 @@
         <title>Great!</title>
     </head>
     <body>
+        <h3>Great</h3>
         <hr/>
         <c:out value="The user ${user.username} was successfully registered."/> </br>
         <a href="menu.htm"> << Back </a>

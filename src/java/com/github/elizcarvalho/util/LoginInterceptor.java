@@ -22,7 +22,9 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
         HttpSession session = request.getSession();
         String token = (String) session.getAttribute("token");
         String uri = request.getRequestURI();
-        if (uri.endsWith("efetuarLogin.htm") || uri.endsWith("login.htm") || uri.endsWith("menu.htm")|| (token!=null && token.equals("approved"))){
+        if (uri.endsWith("efetuarLogin.htm") || uri.endsWith("login.htm") || uri.endsWith("cadastrarUser.htm")
+           || uri.endsWith("sucesso.htm") || uri.endsWith("iniciaCadastroUser.htm")
+           ||(token!=null && token.equals("approved"))){
             return true;
         }
         else{

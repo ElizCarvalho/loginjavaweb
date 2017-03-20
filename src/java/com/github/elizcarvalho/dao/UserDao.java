@@ -10,7 +10,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.management.Query;
 import javax.persistence.TypedQuery;
 
 /**
@@ -44,7 +43,6 @@ public class UserDao {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("TP3JavaWebPU");
         EntityManager em = factory.createEntityManager();
-        em.getTransaction().begin();
         
         boolean userFound = false;
         List<User> list = null;
@@ -58,7 +56,7 @@ public class UserDao {
         if (list!=null){
             userFound = true;
         }
-        em.close();
+        
         return userFound;
     }
     

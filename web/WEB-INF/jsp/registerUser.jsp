@@ -8,6 +8,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
 
     <head>	
@@ -21,7 +22,7 @@
         <s:form method="post" modelAttribute="user" action="cadastrarUser.htm">
             
             Username: <s:input path="username"/> <br/> <br/>
-            Password: <s:input path="password"/> <br/> <br/>
+            Password: <s:password path="password"/> <br/> <br/>
             Email: <s:input path="email"/> <br/> <br/>
             <br/> <br/>
             <input type="submit" value="Register"/> <input type="reset" value="Reset" />

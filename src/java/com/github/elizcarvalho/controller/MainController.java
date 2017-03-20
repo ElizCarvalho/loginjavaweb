@@ -5,6 +5,7 @@
  */
 package com.github.elizcarvalho.controller;
 
+import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,5 +27,8 @@ public class MainController {
         return "menu";
     }
     
-    
+    @RequestMapping(value = "/sucesso.htm", method = RequestMethod.GET)
+    public String callSucesso(){
+        return "sucesso";
+    }
 }
