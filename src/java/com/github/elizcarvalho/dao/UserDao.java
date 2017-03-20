@@ -53,7 +53,8 @@ public class UserDao {
         
         list = search.getResultList();
 
-        if (list!=null){
+        System.out.println(list);
+        if (!list.isEmpty()){
             userFound = true;
         }
         
