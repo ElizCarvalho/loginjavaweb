@@ -14,6 +14,7 @@
         <title>TP3 - Login</title>
     </head>
     <body>
+        
         <h1>Login</h1>
         </hr>
         
@@ -34,5 +35,6 @@
         </s:form>
         <br/><br/>
         <a href="iniciaCadastroUser.htm">User Register</a></li>
+    
     </body>
 </html>
