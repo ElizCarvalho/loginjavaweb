@@ -18,19 +18,19 @@ import javax.persistence.TypedQuery;
  */
 public class UserDao {
    
-//    private EntityManagerFactory factory = null;
-//    private EntityManager em = null;
-//    
-//    
-//    public UserDao(){
-//        factory = Persistence.createEntityManagerFactory("TP3JavaWebPU");
-//        em = factory.createEntityManager();
-//    }
+    private EntityManagerFactory factory = null;
+    private EntityManager em = null;
+    
+    
+    public UserDao(){
+        factory = Persistence.createEntityManagerFactory("TP3JavaWebPU");
+        em = factory.createEntityManager();
+    }
     
     public void cadastrarUser(User user){
         
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("TP3JavaWebPU");
-        EntityManager em = factory.createEntityManager();
+//        EntityManagerFactory factory = Persistence.createEntityManagerFactory("TP3JavaWebPU");
+//        EntityManager em = factory.createEntityManager();
         em.getTransaction().begin();
         em.persist(user);
         em.getTransaction().commit();
@@ -41,8 +41,8 @@ public class UserDao {
     
     public boolean existUser(User user){
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("TP3JavaWebPU");
-        EntityManager em = factory.createEntityManager();
+//        EntityManagerFactory factory = Persistence.createEntityManagerFactory("TP3JavaWebPU");
+//        EntityManager em = factory.createEntityManager();
         
         boolean userFound = false;
         List<User> list = null;
